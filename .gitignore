@@ -1,0 +1,7 @@
+/.idea
+/bin
+/target
+src/main/java/Test.java
+src/main/resources/
+/out
+/src/test/
