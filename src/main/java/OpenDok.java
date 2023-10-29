@@ -1,7 +1,6 @@
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.xwpf.usermodel.*;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -31,9 +30,9 @@ public class OpenDok {
             String answer;
             answer = scanner.nextLine();
 
-            if (answer.equals("y"))
+            if (answer.equals("y") || answer.equals("н"))  // на случай если пользовател не переключил алфавит
                 break;
-            else if (answer.equals("n"))
+            else if (answer.equals("n") || answer.equals("т")) // на случай если пользовател не переключил алфавит
                 System.exit(200);
             else
                 System.out.println("Повторите ввод n или y");
@@ -77,7 +76,6 @@ public class OpenDok {
                     }
                 }
             }
-
 
             try {
                 doc.write(new FileOutputStream(pathSave + file.getName().substring(0, file.getName().length() - 5) + ".docx")); // путь куда будем сохранять

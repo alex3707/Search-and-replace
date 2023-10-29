@@ -20,7 +20,7 @@ public class Search {
 
         while (true) {
             q = scanner.nextLine();
-            if (q.equals("q"))
+            if (q.equals("q") || q.equals("й")) // для русской раскладки
                 break;
             searchString.add(q);
             System.out.println("Введите следующую строку поиска");
@@ -34,7 +34,7 @@ public class Search {
 
         while (true) {
             q = scanner.nextLine();
-            if (q.equals("q"))
+            if (q.equals("q") || q.equals("й")) // для русской раскладки
                 break;
             searchStringCheng.add(q);
             System.out.println("Введите следующую строку замены");
